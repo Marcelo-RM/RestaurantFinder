@@ -10,7 +10,10 @@ import InputLabel from '@mui/material/InputLabel';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import SearchIcon from '@mui/icons-material/Search';
 
+import ImageCard from '../../components/ImageCard';
+
 import Slider from 'react-slick';
+import RestaurantCard from "../../components/RestaurantCard";
 
 const Home = function () {
 
@@ -18,6 +21,7 @@ const Home = function () {
 
   const settings = {
     dots: false,
+    arrows: false,
     infinite: true,
     speed: 500,
     autoplay: true,
@@ -53,15 +57,15 @@ const Home = function () {
         </FormControl>
         <CarouseTitle>Sua área</CarouseTitle>
         <Slider {...settings}>
-          <img alt="" src="https://youmustgo.com.br/wp-content/uploads/2019/09/restaurantes-na-rua-dias-ferreira-5.jpeg" />
-          <img alt="" src="https://youmustgo.com.br/wp-content/uploads/2019/09/restaurantes-na-rua-dias-ferreira-5.jpeg" />
-          <img alt="" src="https://youmustgo.com.br/wp-content/uploads/2019/09/restaurantes-na-rua-dias-ferreira-5.jpeg" />
-          <img alt="" src="https://youmustgo.com.br/wp-content/uploads/2019/09/restaurantes-na-rua-dias-ferreira-5.jpeg" />
-          <img alt="" src="https://youmustgo.com.br/wp-content/uploads/2019/09/restaurantes-na-rua-dias-ferreira-5.jpeg" />
-          <img alt="" src="https://youmustgo.com.br/wp-content/uploads/2019/09/restaurantes-na-rua-dias-ferreira-5.jpeg" />
-          <img alt="" src="https://youmustgo.com.br/wp-content/uploads/2019/09/restaurantes-na-rua-dias-ferreira-5.jpeg" />
+          <ImageCard title="asdf fdsa restaurants" image="https://youmustgo.com.br/wp-content/uploads/2019/09/restaurantes-na-rua-dias-ferreira-5.jpeg" />
+          <ImageCard title="asdf fdsa restaurants" image="https://youmustgo.com.br/wp-content/uploads/2019/09/restaurantes-na-rua-dias-ferreira-5.jpeg" />
+          <ImageCard title="asdf fdsa restaurants" image="https://youmustgo.com.br/wp-content/uploads/2019/09/restaurantes-na-rua-dias-ferreira-5.jpeg" />
+          <ImageCard title="asdf fdsa restaurants" image="https://youmustgo.com.br/wp-content/uploads/2019/09/restaurantes-na-rua-dias-ferreira-5.jpeg" />
+          <ImageCard title="asdf fdsa restaurants" image="https://youmustgo.com.br/wp-content/uploads/2019/09/restaurantes-na-rua-dias-ferreira-5.jpeg" />
+          <ImageCard title="asdf fdsa restaurants" image="https://youmustgo.com.br/wp-content/uploads/2019/09/restaurantes-na-rua-dias-ferreira-5.jpeg" />
         </Slider>
       </Header>
+      <RestaurantCard name="Titulo do rest" address="Rua 19 Q:30 Lt:Q" rating="4" />
     </Container>
     <Map />
   </Wrapper>;
