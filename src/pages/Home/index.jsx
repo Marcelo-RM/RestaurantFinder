@@ -14,10 +14,12 @@ import ImageCard from '../../components/ImageCard';
 
 import Slider from 'react-slick';
 import RestaurantCard from "../../components/RestaurantCard";
+import Modal from "../../components/Modal";
 
 const Home = function () {
 
   const [inputValue, setInputValue] = useState("");
+  const [modalOpened, setModalOpened] = useState(true);
 
   const settings = {
     dots: false,
@@ -70,8 +72,12 @@ const Home = function () {
       <RestaurantCard name="Titulo do rest" address="Rua 19 Q:30 Lt:Q" rating="3" image="https://youmustgo.com.br/wp-content/uploads/2019/09/restaurantes-na-rua-dias-ferreira-5.jpeg" />
       <RestaurantCard name="Titulo do rest" address="Rua 19 Q:30 Lt:Q" rating="3" image="https://youmustgo.com.br/wp-content/uploads/2019/09/restaurantes-na-rua-dias-ferreira-5.jpeg" />
       <RestaurantCard name="Titulo do rest" address="Rua 19 Q:30 Lt:Q" rating="5" image="https://youmustgo.com.br/wp-content/uploads/2019/09/restaurantes-na-rua-dias-ferreira-5.jpeg" />
+
     </Container>
     <Map />
+    <Modal open={modalOpened} onClose={() => setModalOpened(!modalOpened)} >
+      TESTE
+    </Modal>
   </Wrapper>;
 }
 

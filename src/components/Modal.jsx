@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Portal from "./Portal";
 import styled from 'styled-components';
 
@@ -29,14 +29,39 @@ export const Dialog = styled.div`
   width: 500px;
   padding: 24px;
   background-color: #fff;
+  border-radius: 6px;
 `;
 
-const Modal = function (props) {
+const Modal = function ({ children, open, onClose }) {
+
+  useEffect(() => {
+    function onEsc(e) {
+      if (e.keyCode === 27) onClose();
+    };
+
+    window.addEventListener('keydown', onEsc);
+
+    return () => {
+      window.removeEventListener('keydown', onEsc);
+    }
+  }, [onClose]);
+
+
+  if (!open) return null;
+
+  function onOverlayClick() {
+    onClose();
+  };
+
+  function onDialogClick(e) {
+    e.stopPropagation();
+  };
+
   return ([
     <Portal>
-      <Overlay>
-        <Dialog>
-          {props.children}
+      <Overlay onClick={onOverlayClick}>
+        <Dialog onClick={onDialogClick}>
+          {children}
         </Dialog>
       </Overlay>
     </Portal>
