@@ -63,9 +63,13 @@ const Home = function () {
           <ImageCard title="asdf fdsa restaurants" image="https://youmustgo.com.br/wp-content/uploads/2019/09/restaurantes-na-rua-dias-ferreira-5.jpeg" />
           <ImageCard title="asdf fdsa restaurants" image="https://youmustgo.com.br/wp-content/uploads/2019/09/restaurantes-na-rua-dias-ferreira-5.jpeg" />
           <ImageCard title="asdf fdsa restaurants" image="https://youmustgo.com.br/wp-content/uploads/2019/09/restaurantes-na-rua-dias-ferreira-5.jpeg" />
+          <ImageCard title="asdf fdsa restaurants" image="https://youmustgo.com.br/wp-content/uploads/2019/09/restaurantes-na-rua-dias-ferreira-5.jpeg" />
         </Slider>
       </Header>
-      <RestaurantCard name="Titulo do rest" address="Rua 19 Q:30 Lt:Q" rating="4" />
+      <RestaurantCard name="Titulo do rest" address="Rua 19 Q:30 Lt:Q" rating="4" image="https://youmustgo.com.br/wp-content/uploads/2019/09/restaurantes-na-rua-dias-ferreira-5.jpeg" />
+      <RestaurantCard name="Titulo do rest" address="Rua 19 Q:30 Lt:Q" rating="3" image="https://youmustgo.com.br/wp-content/uploads/2019/09/restaurantes-na-rua-dias-ferreira-5.jpeg" />
+      <RestaurantCard name="Titulo do rest" address="Rua 19 Q:30 Lt:Q" rating="3" image="https://youmustgo.com.br/wp-content/uploads/2019/09/restaurantes-na-rua-dias-ferreira-5.jpeg" />
+      <RestaurantCard name="Titulo do rest" address="Rua 19 Q:30 Lt:Q" rating="5" image="https://youmustgo.com.br/wp-content/uploads/2019/09/restaurantes-na-rua-dias-ferreira-5.jpeg" />
     </Container>
     <Map />
   </Wrapper>;

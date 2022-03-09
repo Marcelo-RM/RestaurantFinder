@@ -1,3 +1,4 @@
+import { Rating } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -18,6 +19,7 @@ const Restaurant = styled.div`
 const RestaurantInfo = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 `;
 
 const RestaurantTitle = styled.span`
@@ -36,13 +38,21 @@ const RestaurantAddress = styled.span`
   margin-bottom: 10px;
 `;
 
+const RestaurantPhoto = styled.img`
+  width: 100px;
+  height: 100px;
+  border-radius: 6px;
+  object-fit: cover;
+`
+
 const RestaurantCard = function (props) {
   return <Restaurant>
     <RestaurantInfo>
       <RestaurantTitle>{props.name}</RestaurantTitle>
-      <p>Avaliação</p>
+      <Rating readOnly value={props.rating} precision={0.1} />
       <RestaurantAddress>{props.address}</RestaurantAddress>
     </RestaurantInfo>
+    <RestaurantPhoto src={props.image} alt="Foto do Restaurante" />
   </Restaurant>;
 };
 
